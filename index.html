@@ -30,6 +30,9 @@
     var subject = "";
     var message = "";
    $("#sendMessage").on("click", function() {
+       name = $("#contactform").serialize();
+       email = $("#contactform").serialize();
+       subject = $("#contactform").serialize();
        message = $("#contactform").serialize();
        $.ajax({
            url: "//formspree.io/valentin.m.alexeev@gmail.com", 
