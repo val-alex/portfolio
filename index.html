@@ -25,23 +25,13 @@
    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
    crossorigin="anonymous"></script>
 <script>
-    var name = "";
-    var email = "";
-    var subject = "";
     var message = "";
    $("#sendMessage").on("click", function() {
-       name = $("#contactform").serialize();
-       email = $("#contactform").serialize();
-       subject = $("#contactform").serialize();
        message = $("#contactform").serialize();
        $.ajax({
            url: "//formspree.io/valentin.m.alexeev@gmail.com", 
            method: "POST",
-           data: {
-               name: name,
-               email: email,
-               subject: subject,
-               message: message},
+           data: {message: message},
            dataType: "json"
        });
        alert('Thanks for the email, we\'ll be in touch promptly.');
