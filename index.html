@@ -11,7 +11,7 @@
    </div>
    <div class="input-group">
       <span class="input-group-addon">Subject</span>
-      <input name="form-subject-input" type="text" name="subject" class="form-control" required>
+      <input name="form-subject-input" type="text" name="_subject" class="form-control" required>
    </div>
    <div class="input-group">
       <span class="input-group-addon">Description</span>
@@ -25,13 +25,20 @@
    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
    crossorigin="anonymous"></script>
 <script>
-   var message = "";
+    var name = "";
+    var email = "";
+    var subject = "";
+    var message = "";
    $("#sendMessage").on("click", function() {
        message = $("#contactform").serialize();
        $.ajax({
            url: "//formspree.io/valentin.m.alexeev@gmail.com", 
            method: "POST",
-           data: {message: message},
+           data: {
+               name: name,
+               email: email,
+               subject: subject,
+               message: message},
            dataType: "json"
        });
        alert('Thanks for the email, we\'ll be in touch promptly.');
