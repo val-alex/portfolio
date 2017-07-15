@@ -1,6 +1,6 @@
 <form onsubmit="sendEmail()" method="POST" action="https://formspree.io/valentin.m.alexeev@gmail.com">
   <input type="text" name="_replyto" placeholder="Your email" />
-  <input type="text" name="_subject" value="" placeholder="Subject"/>
+  <input id="subject" type="text" name="_subject" placeholder="Subject"/>
   <textarea id='textareamessege' name="message" placeholder="Your message"></textarea>
   <input type="hidden" name="_next" value="thankYouNext()" />
   <input type="text" name="_gotcha" style="display:none" />
@@ -13,7 +13,10 @@ const sendEmail = () => {
   event.preventDefault();
   console.log('Send Email Is Clicked')
   
-  let content = {message: document.querySelector('#textareamessege').innerText};
+  let content = {
+    message: document.querySelector('#textareamessege').value,
+    subject: document.querySelector('#subject').value
+  };
   
    fetch('https://formspree.io/valentin.m.alexeev@gmail.com', {
     method: 'post',
