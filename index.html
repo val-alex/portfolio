@@ -1,40 +1,35 @@
-<meta name="referrer" content="origin" />
-<form id="contactform" method="POST">
-<div class="form-group">
-   <div class="input-group">
-      <span class="input-group-addon">Name</span>
-      <input name="form-name-input" type="text" name="name" class="form-control" required>
-   </div>
-   <div class="input-group">
-      <span class="input-group-addon">Email</span>
-      <input name="form-email-input" type="email" name="_replyto" class="form-control" required>
-   </div>
-   <div class="input-group">
-      <span class="input-group-addon">Subject</span>
-      <input name="form-subject-input" type="text" name="_subject" class="form-control" required>
-   </div>
-   <div class="input-group">
-      <span class="input-group-addon">Description</span>
-      <textarea name="form-description-input" name="description" class="form-control" rows="4" cols="60" required></textarea>
-   </div>
-   <input type="text" name="_gotcha" style="display:none" />
-   <button id="sendMessage">Send</button>
-</div>
-<script
-   src="https://code.jquery.com/jquery-3.2.1.min.js"
-   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-   crossorigin="anonymous"></script>
+<form onsubmit="sendEmail()" method="POST" action="https://formspree.io/valentin.m.alexeev@gmail.com">
+  <input type="text" name="_replyto" placeholder="Your email" />
+  <input type="text" name="_subject" value="" placeholder="Subject"/>
+  <textarea id='textareamessege' name="message" placeholder="Your message"></textarea>
+  <input type="hidden" name="_next" value="thankYouNext()" />
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit" >Send</button>
+</form>
+
 <script>
-    var message = "";
-   $("#sendMessage").on("click", function() {
-       message = $("#contactform").serialize();
-       $.ajax({
-           url: "//formspree.io/valentin.m.alexeev@gmail.com", 
-           method: "POST",
-           data: {message: message},
-           dataType: "json"
-       });
-       alert('Thanks for the email, we\'ll be in touch promptly.');
-       return false;
-   });
+
+const sendEmail = () => {
+  event.preventDefault();
+  console.log('Send Email Is Clicked')
+  
+  let content = {message: document.querySelector('#textareamessege').innerText};
+  
+   fetch('https://formspree.io/valentin.m.alexeev@gmail.com', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(content)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Here's a list of repos!
+    console.log(data)
+  });
+
+  
+  return false;
+}
+ 
 </script>
