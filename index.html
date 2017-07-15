@@ -1,8 +1,7 @@
 <form onsubmit="sendEmail()" method="POST" action="https://formspree.io/valentin.m.alexeev@gmail.com">
-  <input type="text" name="_replyto" placeholder="Your email" />
+  <input id="email" type="text" name="_replyto" placeholder="Your email" />
   <input id="subject" type="text" name="_subject" placeholder="Subject"/>
-  <textarea id='textareamessege' name="message" placeholder="Your message"></textarea>
-  <input type="hidden" name="_next" value="thankYouNext()" />
+  <textarea id='message' name="message" placeholder="Your message"></textarea>
   <input type="text" name="_gotcha" style="display:none" />
   <button type="submit" >Send</button>
 </form>
@@ -14,8 +13,9 @@ const sendEmail = () => {
   console.log('Send Email Is Clicked')
   
   let content = {
-    message: document.querySelector('#textareamessege').value,
-    subject: document.querySelector('#subject').value
+    email: document.querySelector('#email').value,
+    subject: document.querySelector('#subject').value,
+    message: document.querySelector('#message').value
   };
   
    fetch('https://formspree.io/valentin.m.alexeev@gmail.com', {
@@ -24,12 +24,11 @@ const sendEmail = () => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(content)
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Here's a list of repos!
-    console.log(data)
-  });
+  }).then(response => response.json())
+    .then(data => {
+      // Here's a list of repos!
+      console.log(data)
+    });
 
   
   return false;
