@@ -1,9 +1,10 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
   Flex,
   HStack,
+  IconButton,
   Link,
   Stack,
   useColorMode,
@@ -12,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { ReactNode } from "react";
+
+const Links = ["Home", "Works", "Projects", "Contact"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <NextLink href={"#"} passHref>
@@ -29,8 +32,6 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </NextLink>
 );
 
-const Links = ["Home", "Works", "Projects", "Contact"];
-
 export const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,8 +45,15 @@ export const NavBar = () => {
         alignItems={"center"}
         justifyContent={"space-between"}
       >
+        <IconButton
+          size={"md"}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={"Open Menu"}
+          display={{ sm: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+        />
         <Box>Logo</Box>
-        <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
+        <HStack as={"nav"} spacing={4} display={{ base: "none", sm: "flex" }}>
           {Links.map((link) => (
             <NavLink key={link}>{link}</NavLink>
           ))}
@@ -59,6 +67,16 @@ export const NavBar = () => {
           </Stack>
         </Flex>
       </Flex>
+
+      {isOpen ? (
+        <Box pb={4} display={{ sm: "none" }}>
+          <Stack as={"nav"} spacing={4}>
+            {Links.map((link) => (
+              <NavLink key={link}>{link}</NavLink>
+            ))}
+          </Stack>
+        </Box>
+      ) : null}
     </Box>
   );
 };
