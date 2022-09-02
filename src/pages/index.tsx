@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import { Footer } from "../components/footer";
+import { NavBar } from "../components/navBar";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +14,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box as="main"></Box>
+      <Box as="main">
+        <NavBar />
+      </Box>
 
       <Footer />
     </>
