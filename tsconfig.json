@@ -33,12 +33,16 @@
       "@/theme/*": [
         "src/theme/*"
       ],
+      "@/constants": [
+        "src/constants.tsx"
+      ],
     },
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules"
