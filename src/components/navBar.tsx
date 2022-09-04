@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -11,6 +11,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { Moon, Sun } from "react-feather";
 
 import { LINKS } from "src/constants";
 import Logo from "../../public/logo.svg";
@@ -28,7 +29,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("#abd1c6", "#004643")} px={4}>
         <Flex
           h={16}
           alignItems={"center"}
@@ -56,8 +57,13 @@ export const NavBar = () => {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button onClick={toggleColorMode} alignSelf={"end"}>
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            <Button
+              onClick={toggleColorMode}
+              alignSelf={"end"}
+              bg={useColorModeValue("#abd1c6", "#004643")}
+              _hover={{ bg: useColorModeValue("#e8e4e6", "#f9bc60") }}
+            >
+              {colorMode === "light" ? <Moon /> : <Sun />}
             </Button>
           </Flex>
         </Flex>
