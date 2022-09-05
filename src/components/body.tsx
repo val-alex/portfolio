@@ -1,13 +1,12 @@
 import { Box, Heading, Icon, Stack, Text } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
 import { GitHub } from "react-feather";
 import { Bio } from "./bio";
 import { Contact } from "./contact";
+import { HeroContent } from "./heroContent";
 import { Hobbies } from "./hobbies";
 import { LinkItem } from "./linkItem";
 import { Works } from "./works";
 
-const HeroContent = dynamic(() => import("./heroContent"), { ssr: false });
 export const Body = () => {
   return (
     <Box m="auto" alignItems={"center"} justifyContent={"space-between"}>
