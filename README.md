@@ -13,6 +13,7 @@ My portfolio website :)
 - Create light and dark version of colour palette
 - Add smooth scroll effect to nav bar
 - Make nav bar sticky
+- Add custom 404 page
 - Add page for Works
   - Add page per job
 - Expands on hobbies section
