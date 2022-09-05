@@ -1,30 +1,41 @@
-import { Button, Heading, Stack } from "@chakra-ui/react";
-import { MdBuild, MdCall } from "react-icons/md";
-import { Paragraph } from "./pharagraph";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+import { GitHub } from "react-feather";
+import { Bio } from "./bio";
+import { Contact } from "./contact";
+import { Hobbies } from "./hobbies";
+import { LinkItem } from "./linkItem";
+import { Works } from "./works";
 
+const HeroContent = dynamic(() => import("./heroContent"), { ssr: false });
 export const Body = () => {
   return (
-    <>
-      <h1>
-        Welcome to <a href="#">Val Codes</a>
-      </h1>
-
-      <>
-        <Heading as="h3" variant="section-title">
-          Work
+    <Box m="auto" alignItems={"center"} justifyContent={"space-between"}>
+      <HeroContent />
+      <Stack maxW="container.md" m="auto" mt={"12"}>
+        <Heading as="h3" mt={"8"}>
+          Valentin Alexeev
         </Heading>
-        <Paragraph>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </Paragraph>
-      </>
-    </>
+        <Text>Senior Front End Web Developer (React.js)</Text>
+        <Works />
+        <Bio />
+        <Hobbies />
+        <Heading>Info</Heading>
+        <Text>
+          This website is build with Next.js Chakra UI Formspree & Vercel{" "}
+        </Text>
+        <Text>
+          Check out the{" "}
+          <LinkItem
+            href={"https://github.com/val-alex/portfolio"}
+            icon={GitHub}
+            isExternal={true}
+          >
+            Source
+          </LinkItem>
+        </Text>
+        <Contact />
+      </Stack>
+    </Box>
   );
 };
