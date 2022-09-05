@@ -13,6 +13,7 @@ My portfolio website :)
 - Create light and dark version of colour palette
 - Add smooth scroll effect to nav bar
 - Make nav bar sticky
+- Add React From Hook
 - Add custom 404 page
 - Add page for Works
   - Add page per job
@@ -26,7 +27,6 @@ My portfolio website :)
 - Next.js
 - Chakra UI
 - Emotion
-- React Hook Form
 - Formspree
 - Three.js
 
