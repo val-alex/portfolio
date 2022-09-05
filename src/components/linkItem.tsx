@@ -23,6 +23,7 @@ export const LinkItem = ({
         textDecoration: "underline",
       }}
       isExternal={isExternal}
+      textUnderlineOffset={"4px"}
     >
       <>
         {icon ? <Icon as={icon} /> : null}
