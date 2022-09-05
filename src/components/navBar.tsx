@@ -10,11 +10,9 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import { Moon, Sun } from "react-feather";
 
 import { LINKS } from "src/constants";
-import Logo from "../../public/logo.svg";
 import { LinkItem } from "./linkItem";
 
 export const NavBar = () => {
@@ -29,7 +27,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue("#abd1c6", "#004643")} px={4}>
+      <Box px={4}>
         <Flex
           h={16}
           alignItems={"center"}
@@ -45,9 +43,7 @@ export const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>
-              <Image src={Logo} alt="logo" />
-            </Box>
+            <Box>Val Codes</Box>
             <HStack
               as={"nav"}
               spacing={4}
@@ -61,7 +57,11 @@ export const NavBar = () => {
               onClick={toggleColorMode}
               alignSelf={"end"}
               bg={useColorModeValue("#abd1c6", "#004643")}
-              _hover={{ bg: useColorModeValue("#e8e4e6", "#f9bc60") }}
+              _hover={{
+                bg: useColorModeValue("#e8e4e6", "#f9bc60"),
+                transform: "translateY(-2px)",
+                boxShadow: "lg",
+              }}
             >
               {colorMode === "light" ? <Moon /> : <Sun />}
             </Button>
