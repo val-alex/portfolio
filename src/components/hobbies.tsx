@@ -1,15 +1,25 @@
-import { Heading, Icon, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Heading,
+  Icon,
+  ListItem,
+  Stack,
+  UnorderedList,
+} from "@chakra-ui/react";
 import { Heart } from "react-feather";
 
 export const Hobbies = () => {
   return (
-    <>
-      <Heading as="h3" variant="section-title" fontSize={["3xl", "3xl", "5xl"]}>
+    <Stack>
+      <Heading as="h3" variant="section-title">
         I <Icon as={Heart} />
       </Heading>
       <UnorderedList>
         <ListItem>
-          <strong>Travelling</strong> - been in: 🇫🇷🇨🇭🇮🇹🇩🇪🇵🇱🇹🇷🇰🇿🇺🇸🇮🇳🇸🇬🇲🇾
+          <strong>Travelling</strong> - been in: 🇲🇨🇫🇷🇨🇭🇮🇹🇩🇪🇵🇱🇹🇷🇰🇿🇺🇸🇮🇳🇸🇬🇲🇾
+        </ListItem>
+        <ListItem>
+          <strong>Building Keyboard</strong> - Rama Works Kara & Keychron Q2 are
+          in my collection so far
         </ListItem>
         <ListItem>
           <strong>Drawing</strong> - love a bit of portraits and pixel art
@@ -27,6 +37,6 @@ export const Hobbies = () => {
           the ones
         </ListItem>
       </UnorderedList>
-    </>
+    </Stack>
   );
 };

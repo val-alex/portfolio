@@ -1,9 +1,9 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text } from "@chakra-ui/react";
 
 export const Bio = () => {
   return (
-    <>
-      <Heading as="h3" variant="section-title" fontSize={["3xl", "3xl", "5xl"]}>
+    <Stack>
+      <Heading as="h3" variant="section-title">
         Bio
       </Heading>
       <Text>
@@ -18,6 +18,6 @@ export const Bio = () => {
       <Text>
         <strong>Lived In:</strong> 🇷🇺 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇺🇾 🇧🇷 🇵🇭 🇹🇭 🇧🇬
       </Text>
-    </>
+    </Stack>
   );
 };

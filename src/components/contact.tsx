@@ -16,7 +16,9 @@ export const Contact = () => {
 
   return (
     <Stack>
-      <Heading id="contact">Get in Touch</Heading>
+      <Heading id="contact" as="h3" variant="section-title">
+        Get in Touch
+      </Heading>
 
       <Stack spacing={{ base: 4, md: 8 }} direction={{ base: "column" }}>
         <Stack

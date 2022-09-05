@@ -13,14 +13,18 @@ export const Body = () => {
     <Box m="auto" alignItems={"center"} justifyContent={"space-between"}>
       <HeroContent />
       <Stack maxW="container.md" m="auto" mt={"12"}>
-        <Heading as="h3" mt={"8"}>
+        <Heading as="h3" variant="section-title">
           Valentin Alexeev
         </Heading>
         <Text>Senior Front End Web Developer (React.js)</Text>
         <Works />
         <Bio />
         <Hobbies />
-        <Heading>Info</Heading>
+        <Stack>
+          <Heading as="h3" variant="section-title">
+            Info
+          </Heading>
+        </Stack>
         <Text>
           This website is build with Next.js Chakra UI Formspree & Vercel{" "}
         </Text>

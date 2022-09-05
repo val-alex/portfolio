@@ -1,8 +1,8 @@
-import { Heading, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Heading, ListItem, Stack, UnorderedList } from "@chakra-ui/react";
 
 export const Works = () => {
   return (
-    <>
+    <Stack>
       <Heading as="h3" variant="section-title" id="works">
         Works
       </Heading>
@@ -29,6 +29,6 @@ export const Works = () => {
           2017 - Dec 2017)
         </ListItem>
       </UnorderedList>
-    </>
+    </Stack>
   );
 };
