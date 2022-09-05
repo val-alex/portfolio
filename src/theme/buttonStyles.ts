@@ -5,30 +5,11 @@ import { darken, mode, whiten } from "@chakra-ui/theme-tools"
 // a single part component: ComponentSingleStyleConfig
 export const ButtonStyles: ComponentStyleConfig = {
   // The styles all button have in common
-  baseStyle: {
-    // fontWeight: 'bold',
-    // textTransform: 'uppercase',
-    // borderRadius: 'base', // <-- border radius is same for all variants and sizes
-  },
+  baseStyle: {},
   // Two sizes: sm and md
-  sizes: {
-    // sm: {
-    //   fontSize: 'sm',
-    //   px: 4, // <-- px is short for paddingLeft and paddingRight
-    //   py: 3, // <-- py is short for paddingTop and paddingBottom
-    // },
-    // md: {
-    //   fontSize: 'md',
-    //   px: 6, // <-- these values are tokens from the design system
-    //   py: 4, // <-- these values are tokens from the design system
-    // },
-  },
+  sizes: {},
   // Two variants: outline and solid
   variants: {
-    // solid: {
-    //   bg: 'purple.500',
-    //   color: 'white',
-    // },
     stroke: (props) => ({
       bg: mode(whiten("stroke", 0), whiten("stroke", 10))(props),
       color: mode(whiten("main", 0), whiten("main", 10))(props),

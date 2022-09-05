@@ -31,6 +31,14 @@ const theme = extendTheme(
     },
     components: {
       Button,
+      Heading: {
+        variants: {
+          'section-title': {
+            marginTop: "8",
+            fontSize: "3xl"
+          }
+        }
+      },
     },
     styles: {
       global: (props: any): any => ({
