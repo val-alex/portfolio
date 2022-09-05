@@ -1,5 +1,4 @@
 export const LINKS = [
-  { name: "About", href: "#" },
-  { name: "Works", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Works", href: "#works" },
+  { name: "Contact", href: "#contact" },
 ];
