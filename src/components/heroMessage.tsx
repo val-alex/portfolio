@@ -1,8 +1,7 @@
-import { Button, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { Button, Heading, Stack, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import { Edit, GitHub } from "react-feather";
-import { IconType } from "react-icons/lib";
 
 const ButtonLink = ({
   icon,
@@ -11,7 +10,7 @@ const ButtonLink = ({
   variant = "main",
   children,
 }: {
-  icon?: IconType; // TODO: fix later
+  icon?: ReactElement;
   href?: string | "#";
   isExternal?: boolean;
   variant?: string;
@@ -30,7 +29,7 @@ const ButtonLink = ({
             transform: "translateY(-2px)",
             boxShadow: "lg",
           }}
-          leftIcon={<Icon as={icon} />}
+          leftIcon={icon}
         >
           {children}
         </Button>
@@ -75,7 +74,7 @@ export const HeroMessage = () => {
       <Stack spacing={6} direction={"row"}>
         <ButtonLink
           href="https://docs.google.com/document/d/1lcOI1CoWqdoZpeQ5XxQWDy9QXCeoHbc1NQ_ZspduICU/edit?usp=sharing"
-          icon={Edit}
+          icon={<Edit />}
           isExternal={true}
           variant="highlight"
         >
@@ -84,7 +83,7 @@ export const HeroMessage = () => {
 
         <ButtonLink
           href="https://github.com/val-alex/recipe-app"
-          icon={GitHub}
+          icon={<GitHub />}
           isExternal={true}
           variant="main"
         >

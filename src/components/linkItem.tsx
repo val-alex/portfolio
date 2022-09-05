@@ -1,7 +1,6 @@
-import { Icon, Link } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ReactNode } from "react";
-import { IconType } from "react-icons/lib";
+import { ReactElement, ReactNode } from "react";
 
 export const LinkItem = ({
   icon,
@@ -9,7 +8,7 @@ export const LinkItem = ({
   isExternal = false,
   children,
 }: {
-  icon?: IconType;
+  icon?: ReactElement;
   href?: string | "#";
   isExternal?: boolean;
   children: ReactNode;
@@ -26,7 +25,7 @@ export const LinkItem = ({
       textUnderlineOffset={"4px"}
     >
       <>
-        {icon ? <Icon as={icon} /> : null}
+        {icon ? icon : null}
         {children}
       </>
     </Link>

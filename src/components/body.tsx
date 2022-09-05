@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Icon, Stack, Text } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import { GitHub } from "react-feather";
 import { Bio } from "./bio";
@@ -28,9 +28,9 @@ export const Body = () => {
           Check out the{" "}
           <LinkItem
             href={"https://github.com/val-alex/portfolio"}
-            icon={GitHub}
             isExternal={true}
           >
+            <Icon as={GitHub} />
             Source
           </LinkItem>
         </Text>
