@@ -1,5 +1,7 @@
 import { Box, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import { Suspense } from "react";
 import { GitHub } from "react-feather";
+
 import { Bio } from "./bio";
 import { Contact } from "./contact";
 import { HeroContent } from "./heroContent";
@@ -10,8 +12,10 @@ import { Works } from "./works";
 export const Body = () => {
   return (
     <Box m="auto" alignItems={"center"} justifyContent={"space-between"}>
-      <HeroContent />
-      <Stack maxW="container.md" m="auto" mt={"12"}>
+      <Suspense fallback={`Loading...`}>
+        <HeroContent />
+      </Suspense>
+      <Stack maxW="container.md" m="auto">
         <Heading as="h3" variant="section-title">
           Valentin Alexeev
         </Heading>
