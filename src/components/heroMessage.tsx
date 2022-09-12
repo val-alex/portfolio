@@ -50,25 +50,25 @@ export const HeroMessage = () => {
       <Heading
         fontWeight={600}
         fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
-        color={"#fffffe"}
+        color={"brand.50"}
       >
         Hi 👋 I&apos;m{" "}
-        <Text as={"span"} color={"#f9bc60"}>
+        <Text as={"span"} color={"highlight"}>
           Val
         </Text>{" "}
         <br />
         and I{" "}
-        <Text as={"span"} color={"#f9bc60"}>
+        <Text as={"span"} color={"highlight"}>
           Code
         </Text>
         🧑‍💻
       </Heading>
-      <Text maxW={"3xl"} color={"#e8e4e6"} fontSize={{ base: "xl" }}>
+      <Text maxW={"3xl"} color={"main"} fontSize={{ base: "xl" }}>
         I develop web applications
         <br />
         and I&apos;m based in London 🇬🇧
       </Text>
-      <Text maxW={"3xl"} color={"#e8e4e6"} fontSize={{ base: "xl" }}>
+      <Text maxW={"3xl"} color={"main"} fontSize={{ base: "xl" }}>
         Check out my:
       </Text>
       <Stack spacing={6} direction={"row"}>

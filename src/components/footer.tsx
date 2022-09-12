@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <Box
       mt={"24px"}
-      bg={useColorModeValue("#abd1c6", "#004643")}
+      bg={useColorModeValue("secondary", "brand.500")}
       color={useColorModeValue("gray.700", "gray.200")}
       borderStyle={"solid"}
       borderColor={useColorModeValue("gray.200", "gray.700")}

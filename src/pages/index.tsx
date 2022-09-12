@@ -25,4 +25,5 @@ const Home: NextPage = () => {
   );
 };
 
+export { getStaticProps } from "../theme/chakra";
 export default Home;

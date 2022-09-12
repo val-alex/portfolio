@@ -1,8 +1,8 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { CSSReset } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
-import theme from "../theme";
+import { Chakra } from "@/theme/chakra";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -12,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       "src",
       "https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"
     );
+
     document.getElementsByTagName("head")[0].appendChild(threeScript);
+
     return () => {
       if (threeScript) {
         threeScript.remove();
@@ -21,9 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ChakraProvider theme={theme}>
+    <Chakra cookies={pageProps.cookies}>
+      <CSSReset />
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Chakra>
   );
 }
 

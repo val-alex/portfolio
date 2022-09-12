@@ -1,27 +1,24 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   Flex,
+  Text,
   HStack,
   IconButton,
   Stack,
-  useColorMode,
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { Moon, Sun } from "react-feather";
 
 import { LINKS } from "src/constants";
+import { DarkModeToggle } from "./darkModeToggle";
 import { LinkItem } from "./linkItem";
 
 export const NavBar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const Menu = LINKS.map((link, index) => (
     <LinkItem key={`${link.name}-${index}`} href={link.href}>
-      {link.name}
+      <Text as="b">{link.name}</Text>
     </LinkItem>
   ));
 
@@ -29,7 +26,7 @@ export const NavBar = () => {
     <>
       <Box px={4}>
         <Flex
-          h={16}
+          h={20}
           alignItems={"center"}
           justifyContent={"space-between"}
           maxW="container.md"
@@ -53,18 +50,7 @@ export const NavBar = () => {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button
-              onClick={toggleColorMode}
-              alignSelf={"end"}
-              bg={useColorModeValue("#abd1c6", "#004643")}
-              _hover={{
-                bg: useColorModeValue("#e8e4e6", "#f9bc60"),
-                transform: "translateY(-2px)",
-                boxShadow: "lg",
-              }}
-            >
-              {colorMode === "light" ? <Moon /> : <Sun />}
-            </Button>
+            <DarkModeToggle />
           </Flex>
         </Flex>
 
