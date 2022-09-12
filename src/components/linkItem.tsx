@@ -20,6 +20,7 @@ export const LinkItem = ({
       rounded={"md"}
       _hover={{
         textDecoration: "underline",
+        textDecorationThickness: "2px",
       }}
       isExternal={isExternal}
       textUnderlineOffset={"4px"}

@@ -7,7 +7,7 @@ export const Works = () => {
         Works
       </Heading>
 
-      <UnorderedList>
+      <UnorderedList pl={"18px"}>
         <ListItem>
           Senior Front-End Web Developer (React.js) - <strong>AKQA</strong> -
           (May 2021 - Oct 2021 )
