@@ -8,17 +8,19 @@ import { HeroMessage } from "./heroMessage";
 export const HeroContent = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
+
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
         NET({
           el: vantaRef.current,
           THREE,
-          color: "#abd1c6",
-          backgroundColor: "#004643",
+          color: "hsl(163, 29%, 75%)",
+          backgroundColor: "hsl(177, 100%, 14%)",
         })
       );
     }
+
     return () => {
       // @ts-ignore
       if (vantaEffect) vantaEffect.destroy();

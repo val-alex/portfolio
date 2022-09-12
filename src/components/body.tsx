@@ -15,7 +15,7 @@ export const Body = () => {
       <Suspense fallback={`Loading...`}>
         <HeroContent />
       </Suspense>
-      <Stack maxW="container.md" m="auto">
+      <Stack p={4} maxW="container.md" m="auto">
         <Heading as="h3" variant="section-title">
           Valentin Alexeev
         </Heading>

@@ -13,13 +13,21 @@ export const Hobbies = () => {
       <Heading as="h3" variant="section-title">
         I <Icon as={Heart} />
       </Heading>
-      <UnorderedList>
+      <UnorderedList pl={"18px"}>
         <ListItem>
-          <strong>Travelling</strong> - been in: 🇲🇨🇫🇷🇨🇭🇮🇹🇩🇪🇵🇱🇹🇷🇰🇿🇺🇸🇮🇳🇸🇬🇲🇾
+          <strong>Travelling</strong>
         </ListItem>
+        <UnorderedList pl={"18px"}>
+          <ListItem>
+            <strong>Lived In:</strong> 🇷🇺 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇺🇾 🇧🇷 🇵🇭 🇹🇭 🇧🇬
+          </ListItem>
+          <ListItem>
+            <strong>Been in:</strong> 🇲🇨🇫🇷🇨🇭🇮🇹🇩🇪🇵🇱🇹🇷🇰🇿🇺🇸🇮🇳🇸🇬🇲🇾
+          </ListItem>
+        </UnorderedList>
         <ListItem>
-          <strong>Building Keyboard</strong> - Rama Works Kara & Keychron Q2 are
-          in my collection so far
+          <strong>Building Keyboards</strong> - Rama Works Kara & Keychron Q2
+          are in my collection so far
         </ListItem>
         <ListItem>
           <strong>Drawing</strong> - love a bit of portraits and pixel art
