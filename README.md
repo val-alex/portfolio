@@ -8,18 +8,18 @@ My portfolio website :)
 
 ### Things to come
 
-- Make it mobile responsive
 - Add Logo
 - Create light and dark version of colour palette
-- Add smooth scroll effect to nav bar
-- Make nav bar sticky
+  - after create different themes with theme switcher
 - Add React From Hook
 - Add custom 404 page
-- Add page for Works
+- Add pages for Works
   - Add page per job
 - Expands on hobbies section
-- Add Blog section
-- Add side projects
+  - Add page per hobby
+- Add Blog ( Digital Garden ) section
+- Add side projects section
+  - Add page per side project
 
 ## Tech Stack
 
