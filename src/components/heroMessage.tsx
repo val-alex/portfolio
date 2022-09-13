@@ -73,7 +73,7 @@ export const HeroMessage = () => {
       </Text>
       <Stack spacing={6} direction={"row"}>
         <ButtonLink
-          href="https://docs.google.com/document/d/1lcOI1CoWqdoZpeQ5XxQWDy9QXCeoHbc1NQ_ZspduICU/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1HoAx2GApVn_XsAvp8RiqLxaim6TAa3Vu3n7V1wXPgk4/edit?usp=sharing"
           icon={<Edit />}
           isExternal={true}
           variant="highlight"
