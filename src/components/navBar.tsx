@@ -9,7 +9,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Events, Link as ScrollLink, scrollSpy } from "react-scroll";
+import { Link as ScrollLink, scrollSpy } from "react-scroll";
 
 import { LINKS } from "src/constants";
 import { DarkModeToggle } from "./darkModeToggle";
@@ -18,16 +18,7 @@ export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
-    Events.scrollEvent.register("begin", function (to, element) {});
-
-    Events.scrollEvent.register("end", function (to, element) {});
-
     scrollSpy.update();
-
-    return function cleanup() {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
   }, []);
 
   const Menu = LINKS.map((link, index) => (
