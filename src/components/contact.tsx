@@ -9,16 +9,21 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { GitHub, Linkedin, Mail, Twitter } from "react-feather";
+import { Element } from "react-scroll";
 import { ContactForm } from "./contactForm";
+
+import { LINKS } from "@/constants";
 
 export const Contact = () => {
   const { hasCopied, onCopy } = useClipboard("valentin.m.alexeev@gmail.com");
 
   return (
     <Stack>
-      <Heading id="contact" as="h3" variant="section-title">
-        Get in Touch
-      </Heading>
+      <Element name={LINKS[1].href} className="element">
+        <Heading as="h3" variant="section-title">
+          Get in Touch
+        </Heading>
+      </Element>
 
       <Stack spacing={{ base: 4, md: 8 }} direction={{ base: "column" }}>
         <Stack
