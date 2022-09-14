@@ -1,11 +1,16 @@
 import { Heading, ListItem, Stack, UnorderedList } from "@chakra-ui/react";
+import { Element } from "react-scroll";
+
+import { LINKS } from "@/constants";
 
 export const Works = () => {
   return (
     <Stack>
-      <Heading as="h3" variant="section-title" id="works">
-        Works
-      </Heading>
+      <Element name={LINKS[0].href} className="element">
+        <Heading as="h3" variant="section-title">
+          Works
+        </Heading>
+      </Element>
 
       <UnorderedList pl={"18px"}>
         <ListItem>
