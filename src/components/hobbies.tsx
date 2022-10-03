@@ -29,15 +29,15 @@ export const Hobbies = () => {
         </UnorderedList>
         <ListItem>
           <strong>Building Keyboards</strong> -{" "}
-          <Link target="_blank" href="https://rama.works/kara">
-            <Text as="i">Rama Works Kara</Text>
+          <Link isExternal href="https://rama.works/kara">
+            <Text as={"i"}>Rama Works Kara</Text>
           </Link>{" "}
           ( HHKB Layout ) &{" "}
           <Link
-            target="_blank"
+            isExternal
             href="https://www.keychron.com/pages/keychron-q8-customizable-mechanical-keyboard"
           >
-            <Text as="i">Keychron Q8</Text>
+            <Text as={"i"}>Keychron Q8</Text>
           </Link>{" "}
           ( Alice ISO Layout ) are in my collection so far ⌨
         </ListItem>
@@ -46,34 +46,34 @@ export const Hobbies = () => {
         </ListItem>
         <ListItem>
           <strong>Indie Games</strong> -{" "}
-          <Link target="_blank" href="https://discoelysium.com/">
-            <Text as="i">Disco Elysium</Text>
+          <Link isExternal href="https://discoelysium.com/">
+            <Text as={"i"}>Disco Elysium</Text>
           </Link>{" "}
           and{" "}
-          <Link target="_blank" href="http://www.celestegame.com/">
-            <Text as="i">Celeste</Text>
+          <Link isExternal href="http://www.celestegame.com/">
+            <Text as={"i"}>Celeste</Text>
           </Link>{" "}
           are my favourites 🎮
         </ListItem>
         <ListItem>
           <strong>Foreign Movies</strong> -{" "}
-          <Link target="_blank" href="https://www.imdb.com/title/tt6751668/">
-            <Text as="i">Parasite</Text>
+          <Link isExternal href="https://www.imdb.com/title/tt6751668/">
+            <Text as={"i"}>Parasite</Text>
           </Link>{" "}
           and{" "}
-          <Link target="_blank" href="https://www.imdb.com/title/tt0317248/">
-            <Text as="i">City of God</Text>
+          <Link isExternal href="https://www.imdb.com/title/tt0317248/">
+            <Text as={"i"}>City of God</Text>
           </Link>{" "}
           are my go tos 🎞
         </ListItem>
         <ListItem>
           <strong>Animations</strong> -{" "}
-          <Link target="_blank" href="https://www.imdb.com/title/tt0405296/">
-            <Text as="i">A Scanner Darkly</Text>
+          <Link isExternal href="https://www.imdb.com/title/tt0405296/">
+            <Text as={"i"}>A Scanner Darkly</Text>
           </Link>{" "}
           and{" "}
-          <Link target="_blank" href="https://www.imdb.com/title/tt6451304/">
-            <Text as="i">Have a Nice Day</Text>
+          <Link isExternal href="https://www.imdb.com/title/tt6451304/">
+            <Text as={"i"}>Have a Nice Day</Text>
           </Link>{" "}
           are the ones 📺
         </ListItem>
