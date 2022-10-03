@@ -15,7 +15,7 @@ export const Works = () => {
       <UnorderedList pl={"18px"}>
         <ListItem>
           Senior Front-End Web Developer (React.js) - <strong>AKQA</strong> -
-          (May 2021 - Oct 2021 )
+          (May 2021 - Present)
         </ListItem>
         <ListItem>
           Senior Front-End Web Developer (React.js) - <strong>Codebase8</strong>{" "}

@@ -1,8 +1,10 @@
 import {
   Heading,
   Icon,
+  Link,
   ListItem,
   Stack,
+  Text,
   UnorderedList,
 } from "@chakra-ui/react";
 import { Heart } from "react-feather";
@@ -26,23 +28,54 @@ export const Hobbies = () => {
           </ListItem>
         </UnorderedList>
         <ListItem>
-          <strong>Building Keyboards</strong> - Rama Works Kara & Keychron Q2
-          are in my collection so far
+          <strong>Building Keyboards</strong> -{" "}
+          <Link target="_blank" href="https://rama.works/kara">
+            <Text as="i">Rama Works Kara</Text>
+          </Link>{" "}
+          ( HHKB Layout ) &{" "}
+          <Link
+            target="_blank"
+            href="https://www.keychron.com/pages/keychron-q8-customizable-mechanical-keyboard"
+          >
+            <Text as="i">Keychron Q8</Text>
+          </Link>{" "}
+          ( Alice ISO Layout ) are in my collection so far ⌨
         </ListItem>
         <ListItem>
-          <strong>Drawing</strong> - love a bit of portraits and pixel art
+          <strong>Drawing</strong> - love a bit of portraits and pixel art 🖌️
         </ListItem>
         <ListItem>
-          <strong>Indie Games</strong> - Disco Elysium and Celeste are my
-          favourites
+          <strong>Indie Games</strong> -{" "}
+          <Link target="_blank" href="https://discoelysium.com/">
+            <Text as="i">Disco Elysium</Text>
+          </Link>{" "}
+          and{" "}
+          <Link target="_blank" href="http://www.celestegame.com/">
+            <Text as="i">Celeste</Text>
+          </Link>{" "}
+          are my favourites 🎮
         </ListItem>
         <ListItem>
-          <strong>Foreign Movies</strong> - Parasite and City of God are my go
-          tos
+          <strong>Foreign Movies</strong> -{" "}
+          <Link target="_blank" href="https://www.imdb.com/title/tt6751668/">
+            <Text as="i">Parasite</Text>
+          </Link>{" "}
+          and{" "}
+          <Link target="_blank" href="https://www.imdb.com/title/tt0317248/">
+            <Text as="i">City of God</Text>
+          </Link>{" "}
+          are my go tos 🎞
         </ListItem>
         <ListItem>
-          <strong>Animations</strong> - A Scanner Darkly and Have a Nice Day are
-          the ones
+          <strong>Animations</strong> -{" "}
+          <Link target="_blank" href="https://www.imdb.com/title/tt0405296/">
+            <Text as="i">A Scanner Darkly</Text>
+          </Link>{" "}
+          and{" "}
+          <Link target="_blank" href="https://www.imdb.com/title/tt6451304/">
+            <Text as="i">Have a Nice Day</Text>
+          </Link>{" "}
+          are the ones 📺
         </ListItem>
       </UnorderedList>
     </Stack>
